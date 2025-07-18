@@ -687,11 +687,13 @@ h2 {
 }
 
 .why-card {
-  background-color: white;
+
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease;
+  background-image: url("https://t3.ftcdn.net/jpg/05/52/04/96/360_F_552049606_W6WEfNMJRZCThgCjW8lH3DfdyuT8S9UK.jpg");
+  background-position: center;
 }
 
 .why-card:hover {
