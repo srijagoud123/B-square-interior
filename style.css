@@ -327,7 +327,7 @@ header {
   background-color: #f5f5f5;
   padding: 60px 20px;
   font-family: 'Poppins', sans-serif;
-  background-image: url("img/bg-img.jpg");
+  background-image: url("https://wallpapers.com/images/hd/bright-white-background-lxi3evlbm4uih46l.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -634,7 +634,7 @@ h2 {
   
 .why-section {
   padding: 30px 20px;
-  background-image: url('https://img.freepik.com/free-vector/gradient-black-background-with-wavy-lines_23-2149151738.jpg');
+  background-image: url('img/bgblack-img.avif');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -923,4 +923,137 @@ button{
   
 }
 
-  
+/*footer*/
+.footer {
+  background-image: url("img/bgblack-img.avif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 60px 30px 30px;
+  font-family: Arial, sans-serif;
+
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+ 
+}
+.footer-links {
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-box {
+  flex: 1 1 230px;
+  min-width: 180px;
+ justify-content: space-between;
+}
+
+.footer h4 {
+  color: #ffc107;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer p,
+.footer a,
+.footer li {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+  list-style: none;
+  gap:30;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer-icons a i {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-icons a i:hover {
+  color: #ffc107;
+}
+
+.footer-box ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.footer-gallery img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+/* Responsive: Adjust columns for layout but NOT gallery */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: row;
+  }
+
+  .footer-box {
+    flex: 1 1 45%;
+  }
+  .footer-links {
+    margin: 0 auto;
+    text-align: start;
+    align-items: center;
+  }
+  .footer-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .footer-gallery img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-box {
+    width: 100%;
+  }
+
+  .footer-gallery {
+    grid-template-columns: repeat(3, 1fr); /* Gallery stays 3 columns */
+  }
+
+  .footer-gallery img {
+    height: 80px;
+  }
+}
