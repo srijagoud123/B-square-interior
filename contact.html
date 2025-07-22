@@ -1,0 +1,584 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P3LMZPN0XS"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Navbar */
+header {
+  padding: 5px 10px;
+  position: sticky;
+  background-color: rgb(5, 5, 5);
+  top: 0;
+  z-index: 999;
+  
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-image {
+  width: 130px;
+  height: 100px;
+}
+
+.logo-text {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 25px;
+}
+
+.a-element {
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 20px 10px;
+}
+
+.a-element:hover {
+  color: rgb(230, 196, 44);
+}
+
+
+/* Responsive for Tablets*/
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+    margin-left: 10px;
+    font-size: 20px;
+    color: white;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: rgb(27, 26, 26);
+    width: 100px;
+    padding: 20px;
+    gap: 10px;
+    z-index: 999;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .a-element {
+    padding: 10px 0;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .logo-image {
+    width: 90px;
+    height: 80px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+}
+
+ 
+  /* ===========================
+     Responsive for Mobile Devices
+     =========================== */
+     @media (max-width: 768px) {
+      /* ===== Navbar ===== */
+      .hamburger {
+        display: block;
+        margin-left: 10px;
+        font-size: 20px;
+        color: white;
+      }
+    
+      .logo {
+        font-size: 15px;
+      }
+    
+      .logo-image {
+        width: 60px;
+        height: 60px;
+      }
+    
+      .logo-text {
+        font-size: 15px;
+      }
+    
+      .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: rgb(27, 26, 26);
+        width: 100px;
+        padding: 20px;
+        gap: 10px;
+        z-index: 999;
+      }
+    
+      .navbar-links.show {
+        display: flex;
+      }
+    
+      .a-element {
+        padding: 10px 0;
+      }
+     }
+
+/*contact us */
+
+.contact-section {
+  background: url('https://wallpapercave.com/wp/wp6944248.jpg') no-repeat center center/cover;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.contact-container {
+  display: flex;
+  max-width: 1100px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: orange;
+}
+
+.info-block {
+  margin: 20px 0;
+}
+
+.info-block h4 {
+  color: orange;
+  margin-bottom: 5px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid orange;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+}
+
+.submit-btn {
+  padding: 15px;
+  border: none;
+  background: orange;
+  color: #000;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: orange;
+}
+
+.map {
+  width: 100%;
+  height: 350px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .header-image img{
+    width:100%;
+    height: 100px;
+
+  }
+  .contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid orange;
+  background: transparent;
+  color: #fff;
+  width: 80%;
+  font-size: 16px;
+}
+  .container {
+    flex-direction: column;
+  }
+  .submit-btn {
+  padding: 15px;
+  border: none;
+  width: 50%;
+  background: orange;
+  color: #000;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: orange;
+}
+}
+
+/*footer*/
+.footer {
+  background-image: url("img/bgblack-img.avif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 60px 30px 30px;
+  font-family: Arial, sans-serif;
+
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+ 
+}
+.footer-links {
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-box {
+  flex: 1 1 230px;
+  min-width: 180px;
+ justify-content: space-between;
+}
+
+.footer h4 {
+  color: #ffc107;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer p,
+.footer a,
+.footer li {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+  list-style: none;
+  gap:30;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer-icons a i {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-icons a i:hover {
+  color: #ffc107;
+}
+
+.footer-box ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.footer-gallery img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+/* Responsive: Adjust columns for layout but NOT gallery */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: row;
+  }
+
+  .footer-box {
+    flex: 1 1 45%;
+  }
+  .footer-links {
+    margin: 0 auto;
+    text-align: start;
+    align-items: center;
+  }
+  .footer-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .footer-gallery img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-box {
+    width: 100%;
+  }
+
+  .footer-gallery {
+    grid-template-columns: repeat(3, 1fr); /* Gallery stays 3 columns */
+  }
+
+  .footer-gallery img {
+    height: 80px;
+  }
+}
+  </style>
+</head>
+<body>  
+  
+  <!--Navbar-section-->
+  <header>
+    <div class="navbar">
+        <div class="logo">
+            <img src="img/B square-logo.jpg" alt="logo" class="logo-image">
+            <p class="logo-text"><b>B SQUARE INTERIORS</b></p>
+        </div>
+    
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="navbar-links" id="navlinks" >
+        <a class="a-element" href="index.html">Home</a>
+        <a class="a-element" href="index.html">about</a>
+        <a class="a-element" href="index.html">services</a>
+        <a class="a-element" href="#contact">contact</a> 
+    </div>
+    </div>
+</header>
+
+<script>
+    function togglemenu() {
+        document.getElementById("navlinks").classList.toggle("show");
+    }
+</script>
+
+  <!--contact us banner-->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      
+      <!-- Left Info Column -->
+      <div class="contact-info">
+        <h2>CONTACT US</h2>
+  
+        <div class="info-block">
+          <h4>📞 Call Us</h4>
+          <p>7396971741</p>
+        </div>
+  
+        <div class="info-block">
+          <h4>📍 Location</h4>
+          <p>HYderabad</p>
+        </div>
+  
+        <div class="info-block">
+          <h4>📧 mail id</h4>
+          <p>bsquareinterior01@gmail.com</p>
+        </div>
+      </div>
+  
+      <!-- Right Form Column -->
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="ab0e13aa-f090-4288-9c25-858cd78b064f" />
+  
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Enter your Name" required>
+          <input type="email" name="email" placeholder="Enter a valid email address" required>
+        </div>
+  
+        <input type="text" name="number" placeholder="Phone Number" required>
+        <textarea name="message" rows="4" placeholder="Enter your message" required></textarea>
+  
+        <button type="submit" class="submit-btn">SUBMIT</button>
+      </form>
+  
+    </div>
+  </section>
+
+    <div class="map">
+    <iframe src=""></iframe>
+  </div>  
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+    });
+  </script>
+
+  <!--Footer-->
+<!--footer-->
+<footer class="footer">
+    <div class="footer-container">
+  
+      <!-- About -->
+      <div class="footer-box">
+        <h4>B SQUARE INTERIORS</h4>
+        <p>B Square Interiors transforms spaces with elegant, functional, and innovative interior design solutions tailored to your lifestyle.</p>
+  
+        <div class="footer-icons">
+          <h4>Follow Us On</h4>
+          <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fas fa-location-dot"></i></a>
+        </div>
+      </div>
+  
+      <!-- Links -->
+      <div class="footer-box footer-links">
+        <h4>Links</h4>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">about</a></li>
+            <li><a href="index.html">services</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+      </div>
+  
+    
+  
+      <!-- Contact Info -->
+      <div class="footer-box">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-phone"></i> 7396971741</p>
+        <p><i class="fab fa-instagram"></i> @bsquare</p>
+        <p><i class="fas fa-location-dot"></i> Hyderabad, India</p>
+      </div>
+  
+      <!-- Gallery -->
+      <div class="footer-box gallery-section">
+        <h4>Gallery</h4>
+        <div class="footer-gallery">
+            <a href="img/interior1-img.jpeg" target="_blank">
+              <img src="img/interior1-img.jpeg" alt="Gallery Image 1" />
+            </a>
+            <a href="img/interior2-img.jpeg" target="_blank">
+              <img src="img/interior2-img.jpeg" alt="Gallery Image 2" />
+            </a>
+            <a href="img/interior3-img.jpeg" target="_blank">
+              <img src="img/interior3-img.jpeg" alt="Gallery Image 3" />
+            </a>
+            <a href="img/interior4-img.jpeg" target="_blank">
+              <img src="img/interior4-img.jpeg" alt="Gallery Image 1" />
+            </a>
+            <a href="img/interior5-img.jpeg" target="_blank">
+              <img src="img/interior5-img.jpeg" alt="Gallery Image 2" />
+            </a>
+            <a href="img/interior6-img.jpeg" target="_blank">
+              <img src="img/interior6-img.jpeg" alt="Gallery Image 3" />
+            </a>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+        © 2025 B Square Interiors. All rights reserved. Powered by innovation
+    </div>
+  </footer>
+  </body>
+  </html>
+  

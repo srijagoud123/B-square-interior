@@ -327,7 +327,7 @@ header {
   background-color: #f5f5f5;
   padding: 60px 20px;
   font-family: 'Poppins', sans-serif;
-  background-image: url("https://wallpapers.com/images/hd/bright-white-background-lxi3evlbm4uih46l.jpg");
+  background-image: url("img/bg-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -854,7 +854,6 @@ input[type="text"],input[type="number"] {
 .form-container input::placeholder{
   color: #181717;
 }
-
 button{
   background-color: orange;
   color:white;
