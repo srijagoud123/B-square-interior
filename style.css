@@ -841,13 +841,13 @@ h2 {
   margin-bottom: 25px;
   color: #050505;
 } 
-input[type="text"],input[type="number"] {
+input[type="text"],input[type="text"] {
   width: 20%;
   padding: 22px;
   background: transparent;
   border: none;
   border-bottom: 1px solid #363535;
-  color:#ffffff;
+  color:#0c0b0b;
   font-size: 16px;
   align-items: center;
 }

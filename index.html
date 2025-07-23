@@ -37,7 +37,7 @@
         <h2>We are here to make your dream home a reality</h2>
         <p>Quality,trust, and excellence - the values we build on</p>
         <div class="home-buttons">
-            <a href="#" class="btn-primary">Book free consultancy</a>
+            <a href="bookconsultancy.html" class="btn-primary">Book free consultancy</a>
         </div>
      </div>
     </div>
@@ -158,9 +158,10 @@
   <p>Ready to transform your space?<br> Enter your details below and let's get started!</p>
 
 
-<form>
-  <input type="text" placeholder="Full-Name" required />
-  <input type="text" placeholder="Phone" required/>
+  <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+  <input type="hidden" name="access_key" value="ab0e13aa-f090-4288-9c25-858cd78b064f" />
+  <input type="text" placeholder="Full-Name" name="name" required />
+  <input type="text" placeholder="Phone" name="number" required/>
 
   <button type="submit">send</button>
 </form>

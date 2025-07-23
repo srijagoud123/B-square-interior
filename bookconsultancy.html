@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Free consultancy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body{
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+        .consultancy-section {
+      
+            margin: auto;
+            padding: 30px 20px;
+        }
+    
+        .consultancy {
+            text-align: center;
+         
+            height: 250px;
+            margin-bottom: 30px;
+            background-color: black;
+          
+        }
+    
+        .consultancy h1 {
+            font-size: 42px;
+            color: #fff9f9;
+            padding-top: 90px;
+        }
+    
+        .consultancy p {
+            font-size: 18px;
+            color: #f7f3f3;
+            padding-bottom: 170px;
+        }
+    
+        .row {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+    
+        .row.two-cols {
+            flex-direction: row;
+            gap: 20px;
+        }
+    
+        .row.two-cols input {
+            flex: 1;
+        }
+    
+        .row.two-cols input,
+        .row.two-cols select,
+        .row.two-cols textarea {
+            max-width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+    
+        .radio-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 5px;
+        }
+    
+        .radio-options label {
+            font-size: 15px;
+            width: 50%;
+        }
+    
+        .submit-btn {
+            text-align: center;
+        }
+    
+        .submit-btn button {
+            padding: 12px 40px;
+            background-color: #41506b;
+            color: #fff;
+            font-size: 16px;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        .submit-btn button:hover {
+            background-color: #2e3d59;
+        }
+    
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            background-color: #000000;
+            color: #fff;
+            padding: 40px 20px;
+        }
+    
+        .footer p {
+            margin: 5px 0;
+            font-size: 25px;
+            font-style: italic;
+        }
+    
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+    
+        .logo-image {
+            width: 130px;
+            height: auto;
+        }
+    
+        .footer-icons h4 {
+            margin-bottom: 10px;
+        }
+    
+        .footer-icons a i {
+            font-size: 18px;
+            margin-right: 10px;
+            color: #fff;
+            transition: 0.3s;
+        }
+    
+        .footer-icons a i:hover {
+            color: #ffc107;
+        }
+    
+        /* -------------------------------
+           Responsive Design Starts Here
+        --------------------------------*/
+    
+        /* Tablet view (max-width: 768px) */
+        @media (max-width: 768px) {
+            .consultancy h1 {
+                font-size: 32px;
+                padding-top: 60px;
+            }
+    
+            .consultancy p {
+                font-size: 16px;
+                padding-bottom: 120px;
+            }
+    
+            .row.two-cols {
+                flex-direction: column;
+            }
+    
+            .radio-options label {
+                width: 100%;
+            }
+    
+            .footer p {
+                font-size: 20px;
+            }
+        }
+    
+        /* Mobile view (max-width: 480px) */
+        @media (max-width: 480px) {
+            .consultancy {
+                height: auto;
+                padding: 40px 0;
+            }
+    
+            .consultancy h1 {
+                font-size: 26px;
+                padding-top: 20px;
+            }
+    
+            .consultancy p {
+                font-size: 15px;
+                padding: 0 10px 30px;
+            }
+    
+            .submit-btn button {
+                width: 100%;
+            }
+    
+            .footer p {
+                font-size: 18px;
+            }
+    
+            .logo-image {
+                width: 100px;
+            }
+    
+            .footer-icons a i {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+        <section class="consultancy-section">
+            <div class="consultancy">
+                <h1>Book Free consultancy</h1>
+                <p>Please complete the below form and I will be in touch within 24 hours to book a free consultancy call.</p>
+            </div>
+       
+   
+
+    <!--form -->
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+    <input type="hidden" name="access_key" value="ab0e13aa-f090-4288-9c25-858cd78b064f" />
+
+    <!--custom subject line-->
+    <input type="hidden" name="subject" value="Consultancy Form Submitted" />
+
+    <div class="row two-cols">
+        <input type="text" name="First-Name" placeholder="First-Name" required />
+        <input type="text" name="Last-Name" placeholder="Last-Name" required />
+    </div>
+    <div class="row two-cols">
+        <input type="text" name="email" placeholder="Your Email" required />
+        <input type="text" name="number" placeholder="Phone-Number" required />  
+    </div>
+    <div class="row">
+        <label for="service">What kind of help do you need?</label>
+        <select id = "service" name="service" required/>
+        <option value="">select</option>
+        <option>Home interior design</option>
+        <option>kitchen or bedroom makeover</option>
+        <option>Renovation or remodeling</option>
+        <option>Furniture and decoration ideas</option>
+        <option>others</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <label>Preferred Consultation Method</label>
+        <div class="radio-options">
+            <label><input type="radio" name="mode"  value="Phone Call" required>Phone Call</label>
+            <label><input type="radio" name="mode"  value="Vedio Call" required>Vedio Call</label>
+            <label><input type="radio" name="mode" value="In-Person Meeting" required>In-Person Meeting</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <textarea name="message" placeholder="Tell us briefly about your design or ideas..."></textarea>
+    </div>
+
+     <div class="submit-btn">
+        <button type="submit">Submit</button>
+     </div>
+
+     <footer class="footer">
+        <p>Let's design a space you will love to live or work in</p>
+
+        <div class="logo">
+            <img src="img/B square-logo.jpg" alt="logo" class="logo-image">
+        </div>
+        <div class="footer-icons">
+            <h4>Follow Us On</h4>
+            <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fas fa-location-dot"></i></a>
+          </div>
+
+     </footer>
+    </form>
+</section>
+</body>
+</html>
