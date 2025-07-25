@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>poojaroom room</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .heading-container {
+      padding: 20px 0;
+      background-image: url("img/pooja-bg-img.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .heading {
+      text-align: center;
+    }
+
+    .heading h1 {
+      font-size: 32px;
+      color: rgb(15, 15, 15);
+    }
+
+    .description {
+      text-align: center;
+      margin: 20px auto;
+      width: 60%;
+    }
+
+    .description h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .description p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .highlights {
+      width: 60%;
+      margin: 20px auto;
+    }
+
+    .highlights ul {
+      padding-left: 0;
+    }
+
+    .highlights li {
+      list-style: none;
+      font-size: 20px;
+      margin: 10px 0;
+      display: flex;
+      
+      
+    }
+
+    .paragraph {
+      text-align: center;
+      font-size: 20px;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .quote-banner {
+      text-align: center;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: bold;
+      margin: 40px 20px;
+      color: #1f1f1f;
+      font-family: 'Georgia', serif;
+      background-color: orange;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Tablet view: 768px to 1024px */
+    @media (max-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .gallery img {
+        height: 200px;
+      }
+
+      .heading h1 {
+        font-size: 28px;
+      }
+
+      .description,
+      .highlights,
+      .paragraph {
+        width: 90%;
+        text-align: center;
+      }
+
+      .description h2 {
+        font-size: 20px;
+      }
+
+      .description p,
+      .highlights li,
+      .paragraph {
+        font-size: 18px;
+      }
+
+      .quote-banner {
+        font-size: 18px;
+        margin: 30px 15px;
+        padding: 18px;
+      }
+    }
+
+    /* Mobile view: up to 767px */
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .gallery img {
+        height: 150px;
+      }
+    
+      .heading-container {
+      background-image: url("img/pooja-bg-img.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+      .heading h1 {
+        font-size: 22px;
+        color: rgb(19, 18, 17);
+      }
+
+      .description,
+      .highlights,
+      .paragraph {
+        width: 95%;
+        text-align: start;
+      }
+
+      .description h2 {
+        font-size: 18px;
+      }
+
+      .description p,
+      .highlights li,
+      .paragraph {
+        font-size: 15px;
+        align-items: flex-start;
+      }
+
+      .quote-banner {
+        font-size: 16px;
+        margin: 20px 10px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="heading-container">
+    <div class="heading">
+      <h1>POOJA ROOM INTERIORS</h1>
+    </div>
+
+    <div class="description">
+      <h2>"Designs that reflect your devotion."</h2>
+      <p>A sacred space deserves sacred attention. We create pooja rooms that are rooted in tradition, but styled with sophistication — perfect for daily rituals and peaceful moments..</p>
+    </div>
+
+    <div class="highlights">
+      <ul>
+        <li>★ CNC-cut designs with mythological patterns</li>
+        <li>★ Marble or wooden mandir units with built-in storage </li>
+        <li>★ Soft spotlighting for idol placement</li>
+        <li>★ Backdrops using jaali panels, murals, or gold leaf finishes</li>
+        <li>★ Bell holders, incense drawers & diya trays elegantly integrated</li>
+      </ul>
+    </div>
+
+    <div class="gallery">
+      <a href="img/poojaroom-design 1.jpeg" target="_blank">
+        <img src="img/poojaroom-design 1.jpeg" alt="poojaroom-design 1">
+      </a>
+      <a href="img/poojaroom-design 2.jpeg" target="_blank">
+        <img src="img/poojaroom-design 2.jpeg" alt="poojaroom-design 2">
+      </a>
+      <a href="img/poojaroom-design 1.jpeg" target="_blank">
+        <img src="img/poojaroom-design 1.jpeg" alt="poojaroom-design 3">
+      </a>
+      <a href="img/poojaroom-design 2.jpeg" target="_blank">
+        <img src="img/poojaroom-design 2.jpeg" alt="poojaroom-design 4">
+      </a>  
+    </div>
+    <div class="quote-banner">
+        <p>"Bring divine serenity into your home with interiors that honour your faith beautifully."</p>
+      </div>
+  </div>
+ 
+</body>
+</html>
