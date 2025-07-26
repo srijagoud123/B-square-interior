@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - B Square Interiors</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fb;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffffaa;
+    }
+
+    .header {
+      background: #0d1b2a;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+    }
+
+    .header p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about img {
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      flex: 1 1 300px;
+    }
+
+    .about-text h2 {
+      color: #0d1b2a;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-icons img {
+      width: 24px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .mission {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mission-text {
+      flex: 1 1 300px;
+    }
+
+    .mission-text h2 {
+      color: #0d1b2a;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .mission img {
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    /* Reviews Section */
+    .reviews {
+      text-align: center;
+    }
+
+    .reviews h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #0d1b2a;
+    }
+
+    .reviews p {
+      margin-bottom: 2rem;
+      color: #666;
+    }
+
+    .review-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .review-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      width: 280px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .review-card h4 {
+      margin-bottom: 0.3rem;
+      color: #0d1b2a;
+    }
+
+    .review-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .stars {
+      color: #f0c040;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .about,
+      .mission {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about img,
+      .mission img {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .review-card {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>About Us</h1>
+  </div>
+
+  <!-- About Section -->
+  <section class="about">
+    <img src="img/aboutright-image.jpg" alt="Company Image" />
+    <div class="about-text">
+      <h2>B Square Interiors</h2>
+      <p> 
+             At <strong>B Square Interiors</strong>,we specialize in delivering exceptional interior design solutions tailored to meet the unique needs of residential and commerical spaces.
+             With a team of highly skilled professsionals and a passion for creativity, we transform ideas into timeless, functional environments.
+            </p>
+            <p>
+                Our commitment to quality,innovation, and attention to detail sets us apart. From concept to completion, B Square Interiors offers end-to-end services that blend aesthetics with functionality,ensuring every project reflects the client's vision and lifestyle.
+            </p>
+      <div class="social-icons">
+        <img src="https://via.placeholder.com/24x24?text=F" alt="Facebook" />
+        <img src="https://via.placeholder.com/24x24?text=I" alt="Instagram" />
+        <img src="https://via.placeholder.com/24x24?text=T" alt="Twitter" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mission">
+    <div class="mission-text">
+      <h2>Our Mission</h2>
+      <p>
+        At B Square Interiors, our mission is to create timeless and user-friendly spaces that bring harmony between aesthetics and function. We prioritize client needs, blending creativity with practical execution to deliver interior solutions that inspire.
+      </p>
+    </div>
+    <img src="https://via.placeholder.com/300x200?text=Mission" alt="Mission Image" />
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    <p>Here's what our happy clients are saying about B Square Interiors.</p>
+    <div class="review-list">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h4>Priya S.</h4>
+        <p>Absolutely loved the way they transformed my living room! Elegant, modern, and very professional.</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <h4>Rakesh K.</h4>
+        <p>The team was very responsive and the outcome was beyond expectations. Great attention to detail!</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h4>Meena R.</h4>
+        <p>Wonderful service from start to finish. Highly recommend B Square for any interior work!</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
