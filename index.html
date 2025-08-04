@@ -16,21 +16,76 @@
                 <p class="logo-text"><b>B SQUARE INTERIORS</b></p>
             </div>
         
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="hamburger" onclick="toggleMenu()" aria-label="menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
         <div class="navbar-links" id="navlinks" >
             <a class="a-element" href="#Home">Home</a>
-            <a class="a-element" href="#about">about</a>
+            <a class="a-element" href="aboutus.html">about</a>
             <a class="a-element" href="#services">services</a>
-            <a class="a-element" href="contact.html">contact</a> 
+
+            <div class="dropdown" id="brandsDropdown">
+              <button class="a-element" id="brandsBtn" aria-haspopup="true" aria-expanded="false">
+                brands <span class="arrow" aria-hidden="true">&#x25BE;</span>
+              </button>
+              <div class="dropdown-menu" aria-label="Brands list" role="menu">
+                <a href="brand1.html" role="menuitem">Hardware Brands</a>
+                <a href="brand2.html" role="menuitem">Plywood Brands</a>
+                <a href="brand3.html" role="menuitem">False ceiling Brands</a>
+                <a href="brand4.html" role="menuitem">lights Brands</a>
+                <a href="brand5.html" role="menuitem">Wires Brands</a>
+                <a href="brand6.html" role="menuitem">Glues Brands</a>
+              </div>
+            </div>
+
+            <a class="a-element" href="contact.html">contact us </a> 
+            
         </div>
         </div>
     </header>
-
     <script>
-        function toggleMenu() {
-            document.getElementById("navlinks").classList.toggle("show");
+      (function(){
+        const dropdown = document.getElementById('brandsDropdown');
+        const btn = document.getElementById('brandsBtn');
+        const menuList = dropdown.querySelector('.dropdown-menu');
+    
+        function closeDropdown() {
+          dropdown.classList.remove('open');
+          btn.setAttribute('aria-expanded','false');
         }
+        function openDropdown() {
+          dropdown.classList.add('open');
+          btn.setAttribute('aria-expanded','true');
+        }
+    
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          dropdown.classList.toggle('open');
+          const expanded = dropdown.classList.contains('open');
+          btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        });
+    
+        // Close when clicking/tapping outside
+        document.addEventListener('pointerdown', e => {
+          if (!dropdown.contains(e.target)) {
+            closeDropdown();
+          }
+        });
+    
+        // Escape key closes dropdown
+        document.addEventListener('keydown', e => {
+          if (e.key === 'Escape') closeDropdown();
+        });
+    
+        // Prevent inside clicks from bubbling unexpectedly
+        menuList.addEventListener('click', e => e.stopPropagation());
+      })();
     </script>
+     <script>
+      function toggleMenu() {
+          document.getElementById("navlinks").classList.toggle("show");
+      }
+  </script>
     <!--Home section-->
     <div class="home-section" id="Home">
      <div class="home-content">

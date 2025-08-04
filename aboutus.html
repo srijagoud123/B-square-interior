@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - B Square Interiors</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+ body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ overflow-x: hidden;
+ 
+}
+
+/* Navbar */
+header {
+  position: sticky;
+  background-color: white;
+  top: 0;
+  z-index: 999;
+  
+}
+
+.navbar {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  gap:20px;
+
+}
+
+.logo-image {
+  width: 100px;
+  height: 80px;
+ 
+}
+
+.logo-text {
+  color: rgb(44, 145, 179);
+  font-size: 25px;
+  gap:20px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.a-element {
+  text-decoration: none;
+  color:rgb(44, 145, 179);
+  padding: 10px 10px;
+  font-size: 18px;
+  
+}
+.dropdown { 
+  position: relative; 
+  display: inline-block;
+ }
+.dropdown button {
+  background:none; 
+  border:none; 
+  cursor:pointer; 
+  font:inherit; 
+  display:flex; 
+  align-items:center;
+  gap:4px;
+   }
+.arrow { 
+  transition: transform .25s ease; 
+  font-size:0.8em; 
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  min-width: 160px;
+  display: none;
+  flex-direction: column;
+  z-index: 100;
+}
+.dropdown-menu a {
+  padding: 8px 14px;
+  display: block;
+  text-decoration: none;
+  color: #222;
+  font-size: 0.9rem;
+}
+.dropdown-menu a:hover {
+   background: #f0f0f0;
+   }
+
+.dropdown.open .dropdown-menu {
+   display: flex;
+   }
+.dropdown.open .arrow {
+   transform: rotate(180deg); 
+  }
+
+.a-element:last-child {
+  background-color:#060607;
+  color: white;
+  margin-right: 10px;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+
+.a-element:last-child:hover {
+  background-color: #050505;
+  }
+
+
+/* Responsive for tablets and mobile */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+    font-size: 22px;
+    color: #0a0a0a;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-right: 20px;
+  }
+  .logo-image {
+    width: 80px;
+    height: auto;
+  }
+  .logo-text {
+    font-size: 16px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    background-color: #fffcfc;
+    width: 150px;
+    padding: 16px 0;
+    gap: 0;
+    z-index: 999;
+    overflow-y: auto;
+    max-height: calc(100vh - 64px);
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links 
+  .a-element,
+  .dropdown > button
+  .a-element {
+    color: rgb(44, 145, 179) ;
+    padding: 14px 20px;
+    font-size: 1.2rem;
+    width: 70%;
+    text-align: left;
+    background: none;
+    border: none;
+ 
+  }
+
+  .a-element:last-child {
+    margin: 10px 20px;
+    background-color: #060607;
+    color: white;
+    border-radius: 30px;
+    font-size: 1rem;
+    padding: 12px 18px;
+    text-align: center;
+    margin-top:20px;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  #brandsBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Mobile dropdown becomes accordion-style */
+  .dropdown-menu {
+    position: static;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: white;
+    display: none;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-menu a {
+    padding: 12px 28px;
+    font-size: 1rem;
+    color: #1f1f1f;
+  }
+
+
+}
+     
+  
+
+  
+/*header*/  
+
+a {
+  text-decoration: none;
+  color: #ffffffaa;
+}
+
+.heading {
+  background-image: url("https://images.pexels.com/photos/304664/pexels-photo-304664.jpeg?cs=srgb&dl=pexels-martinpechy-304664.jpg&fm=jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 2rem  ;
+  font-style: italic;
+  color: rgb(59, 51, 51);
+  min-width:100%;
+  margin: auto;
+
+}
+
+.heading h1 {
+  font-size: 80px;
+  padding-top: 20px;
+}
+
+section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1px;
+  padding-top: 3rem;
+  
+}
+
+.about img {
+  width: 300px;
+  border-radius: 10px;
+ 
+}
+
+.about-text {
+  flex: 1 1 300px;
+  font-size: 20px;
+  
+}
+
+.about-text h2 {
+  color:rgb(44, 145, 179);
+  font-size: 2rem;
+  margin-bottom: 20px
+}
+
+/* Mission Section */
+.mission {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.mission-text {
+  flex: 1 1 300px;
+}
+
+.mission-text h2 {
+  color:rgb(44, 145, 179);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.mission-text p{
+  margin-bottom: 0;
+  align-items: flex-start;
+}
+
+.mission img {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Video Section */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.left {
+  position: relative;
+  width: 300px;
+}
+
+.left video {
+  width: 100%;
+  border-radius: 20px;
+ 
+}
+
+.caption {
+  background: white;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-size: 20px;
+  
+}
+
+.caption strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.right {
+  max-width: 500px;
+}
+
+.right h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-style: italic;
+  color: rgb(44, 145, 179);
+}
+
+.right p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+ 
+}
+
+.quote {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  border-left: 4px solid #facc15;
+  padding-left: 10px;
+  color: #444;
+}
+
+/* Reviews Section */
+.reviews {
+  text-align: center;
+  background-image: url("https://images.saymedia-content.com/.image/t_share/MTkyOTkyMzE2OTQ3MjQ0MjUz/website-background-templates.jpg");
+  background-size: cover;
+}
+
+.reviews h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color:black
+}
+
+.reviews p {
+  margin-bottom: 2rem;
+  color: #666;
+  font-size: 18px;
+}
+
+.review-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.review-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.review-card h4 {
+  margin-bottom: 0.3rem;
+  color: #0d1b2a;
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.stars {
+  color: #f0c040;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive: Tablet & Mobile */
+@media (max-width: 1024px) {
+  .right h1 {
+    font-size: 28px;
+  }
+
+  .right p,
+  .quote,
+  .about-text,
+  .mission-text {
+    font-size: 18px;
+  }
+
+  .about,
+  .mission,
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left,
+  .right,
+  .about-text,
+  .mission-text,
+  .review-card {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .about img,
+  .mission img,
+  .left video {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading{
+    padding-top: 6rem;
+   
+  }
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 0.9rem;
+  }
+  .about-text p{
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  .mission {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px 20px 15px;
+  margin-bottom: 30px;
+}
+.mission-text p{
+  font-size: 18px;
+  text-align: justify;
+}
+.mission img{
+  margin-bottom: 10px;
+ padding-bottom: 50px;
+ 
+}
+  .right h1 {
+    font-size: 24px;
+  }
+
+  .right p,
+  .quote,
+  .mission-text {
+    font-size: 16px;
+  }
+
+  .review-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .about img,
+  .mission img,
+  .left video {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+   <!--Navbar-section-->
+   <header>
+    <div class="navbar">
+        <div class="logo">
+            <img src="img/B square-logo.jpg" alt="logo" class="logo-image">
+            <p class="logo-text"><b>B SQUARE INTERIORS</b></p>
+        </div>
+    
+    <div class="hamburger" onclick="toggleMenu()" aria-label="menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="navbar-links" id="navlinks" >
+        <a class="a-element" href="index.html">Home</a>
+        <a class="a-element" href="aboutus.html">about</a>
+        <a class="a-element" href="index.html">services</a>
+
+        <div class="dropdown" id="brandsDropdown">
+          <button class="a-element" id="brandsBtn" aria-haspopup="true" aria-expanded="false">
+            brands <span class="arrow" aria-hidden="true">&#x25BE;</span>
+          </button>
+          <div class="dropdown-menu" aria-label="Brands list" role="menu">
+            <a href="brand1.html" role="menuitem">Hardware Brands</a>
+            <a href="brand2.html" role="menuitem">Plywood Brands</a>
+            <a href="brand3.html" role="menuitem">False ceiling Brands</a>
+            <a href="brand4.html" role="menuitem">lights Brands</a>
+            <a href="brand5.html" role="menuitem">Wires Brands</a>
+            <a href="brand6.html" role="menuitem">Glues Brands</a>
+          </div>
+        </div>
+
+        <a class="a-element" href="contact.html">contact us </a> 
+        
+    </div>
+    </div>
+</header>
+<script>
+  (function(){
+    const dropdown = document.getElementById('brandsDropdown');
+    const btn = document.getElementById('brandsBtn');
+    const menuList = dropdown.querySelector('.dropdown-menu');
+
+    function closeDropdown() {
+      dropdown.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+    function openDropdown() {
+      dropdown.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      dropdown.classList.toggle('open');
+      const expanded = dropdown.classList.contains('open');
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+
+    // Close when clicking/tapping outside
+    document.addEventListener('pointerdown', e => {
+      if (!dropdown.contains(e.target)) {
+        closeDropdown();
+      }
+    });
+
+    // Escape key closes dropdown
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeDropdown();
+    });
+
+    // Prevent inside clicks from bubbling unexpectedly
+    menuList.addEventListener('click', e => e.stopPropagation());
+  })();
+</script>
+ <script>
+  function toggleMenu() {
+      document.getElementById("navlinks").classList.toggle("show");
+  }
+</script>
+<!--header-->
+  <div class="heading">
+    <h1>About Us</h1>
+  </div>
+
+  <!-- About Section -->
+  <section class="about">
+    <img src="img/aboutright-image.jpg" alt="Company Image" />
+    <div class="about-text">
+      <h2>B Square Interiors</h2>
+      <p> 
+             At <strong>B Square Interiors</strong>,we specialize in delivering exceptional interior design solutions tailored to meet the unique needs of residential and commerical spaces.
+             With a team of highly skilled professsionals and a passion for creativity, we transform ideas into timeless, functional environments.
+            </p>
+            <p>
+                Our commitment to quality,innovation, and attention to detail sets us apart. From concept to completion, B Square Interiors offers end-to-end services that blend aesthetics with functionality,ensuring every project reflects the client's vision and lifestyle.
+            </p>
+   
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mission">
+    <div class="mission-text">
+      <h2>Our Mission</h2>
+      <p>At B Square Interiors, our mission is to create timeless and user-friendly spaces that bring harmony between aesthetics and function. We prioritize client needs, blending creativity with practical execution to deliver interior solutions that inspire.
+      </p>
+    </div>
+    <img src="img/homepage-image.jpg" alt="Mission Image" class="mission-img"/>
+  </section>
+
+  <!--vedio section-->
+
+  <div class="container">
+    <div class="left">
+      <video controls poster="https://via.placeholder.com/300x250?text=Interior+Video+Preview">
+        <source src="img/interiors-design.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="caption">
+        <strong>"Transforming Spaces with Elegance"</strong>
+        – B Square Interiors
+      </div>
+    </div>
+
+    <div class="right">
+      <h1>We design spaces that inspire</h1>
+      <p>At B Square Interiors, we blend creativity with functionality to deliver beautifully crafted interiors. From modern homes to smart office setups, our designs reflect style, comfort, and purpose.</p>
+      <div class="quote">
+        “Design creates the atmosphere,not just the appearance.”
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Reviews Section -->
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    <p>Here's what our happy clients are saying about B Square Interiors.</p>
+    <div class="review-list">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h4>---</h4>
+        <p>Absolutely loved the way they transformed my living room! Elegant, modern, and very professional.</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <h4>---</h4>
+        <p>The team was very responsive and the outcome was beyond expectations. Great attention to detail!</p>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h4>---</h4>
+        <p>Wonderful service from start to finish. Highly recommend B Square for any interior work!</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

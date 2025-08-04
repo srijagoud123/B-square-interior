@@ -6,28 +6,29 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-P3LMZPN0XS"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    body {
-  background-color: #fff;
-  color: #333;
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ overflow-x: hidden;
+ 
 }
 
 /* Navbar */
 header {
-  padding: 5px 10px;
   position: sticky;
-  background-color: rgb(5, 5, 5);
+  background-color: white;
   top: 0;
   z-index: 999;
   
 }
 
 .navbar {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,16 +40,20 @@ header {
   align-items: center;
   font-size: 24px;
   font-weight: bold;
+  gap:20px;
+
 }
 
 .logo-image {
-  width: 130px;
-  height: 100px;
+  width: 100px;
+  height: 80px;
+ 
 }
 
 .logo-text {
-  color: rgb(255, 255, 255);
+  color: rgb(44, 145, 179);
   font-size: 25px;
+  gap:20px;
 }
 
 .hamburger {
@@ -58,121 +63,193 @@ header {
 
 .navbar-links {
   display: flex;
+  align-items: center;
   gap: 25px;
 }
 
 .a-element {
   text-decoration: none;
-  color:white;
-  font-weight: bold;
+  color:rgb(44, 145, 179);
+  padding: 10px 10px;
   font-size: 18px;
-  padding: 20px 10px;
+  
+}
+.dropdown { 
+  position: relative; 
+  display: inline-block;
+ }
+.dropdown button {
+  background:none; 
+  border:none; 
+  cursor:pointer; 
+  font:inherit; 
+  display:flex; 
+  align-items:center;
+  gap:4px;
+   }
+.arrow { 
+  transition: transform .25s ease; 
+  font-size:0.8em; 
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  min-width: 160px;
+  display: none;
+  flex-direction: column;
+  z-index: 100;
+}
+.dropdown-menu a {
+  padding: 8px 14px;
+  display: block;
+  text-decoration: none;
+  color: #222;
+  font-size: 0.9rem;
+}
+.dropdown-menu a:hover {
+   background: #f0f0f0;
+   }
+
+.dropdown.open .dropdown-menu {
+   display: flex;
+   }
+.dropdown.open .arrow {
+   transform: rotate(180deg); 
+  }
+
+.a-element:last-child {
+  background-color:#060607;
+  color: white;
+  margin-right: 10px;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
 }
 
-.a-element:hover {
-  color: rgb(230, 196, 44);
-}
+.a-element:last-child:hover {
+  background-color: #050505;
+  }
+
 
 
 /* Responsive for Tablets*/
-
+/* Responsive for tablets and mobile */
 @media (max-width: 1024px) {
   .hamburger {
     display: block;
-    margin-left: 10px;
-    font-size: 20px;
-    color: white;
+    font-size: 22px;
+    color: #0a0a0a;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-right: 20px;
+  }
+  .logo-image {
+    width: 80px;
+    height: auto;
+  }
+  .logo-text {
+    font-size: 16px;
   }
 
   .navbar-links {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: rgb(27, 26, 26);
-    width: 100px;
-    padding: 20px;
-    gap: 10px;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    background-color: #fffcfc;
+    width: 150px;
+    padding: 16px 0;
+    gap: 0;
     z-index: 999;
+    overflow-y: auto;
+    max-height: calc(100vh - 64px);
   }
 
   .navbar-links.show {
     display: flex;
   }
 
+  .navbar-links 
+  .a-element,
+  .dropdown > button
   .a-element {
-    padding: 10px 0;
-  }
-
-  .navbar {
-    padding: 10px 20px;
-  }
-
-  .logo-image {
-    width: 90px;
-    height: 80px;
-  }
-
-  .logo-text {
-    font-size: 20px;
-  }
-}
-
+    color: rgb(44, 145, 179);
+    padding: 14px 20px;
+    font-size: 1.2rem;
+    width: 70%;
+    text-align: left;
+    background: none;
+    border: none;
  
-  /* ===========================
-     Responsive for Mobile Devices
-     =========================== */
-     @media (max-width: 768px) {
-      /* ===== Navbar ===== */
-      .hamburger {
-        display: block;
-        margin-left: 10px;
-        font-size: 20px;
-        color: white;
-      }
-    
-      .logo {
-        font-size: 15px;
-      }
-    
-      .logo-image {
-        width: 60px;
-        height: 60px;
-      }
-    
-      .logo-text {
-        font-size: 15px;
-      }
-    
-      .navbar-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background-color: rgb(27, 26, 26);
-        width: 140px;
-        padding: 20px;
-        gap: 10px;
-        z-index: 999;
-      }
-    
-      .navbar-links.show {
-        display: flex;
-      }
-    
-      .a-element {
-        padding: 10px 0;
-      }
-     }
+  }
+
+  .a-element:last-child {
+    margin: 10px 20px;
+    background-color: #060607;
+    color: white;
+    border-radius: 30px;
+    font-size: 1rem;
+    padding: 12px 18px;
+    text-align: center;
+    margin-top:20px;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  #brandsBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Mobile dropdown becomes accordion-style */
+  .dropdown-menu {
+    position: static;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: white;
+    display: none;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-menu a {
+    padding: 12px 28px;
+    font-size: 1rem;
+    color: #1f1f1f;
+  }
+
+
+}
+     
 
 /*contact us */
 
 .contact-section {
-  background: url('https://wallpapercave.com/wp/wp6944248.jpg') no-repeat center center/cover;
+  background: url('https://images.freecreatives.com/wp-content/uploads/2016/04/Beautiful-Plain-Website-Background.jpg') no-repeat center center/cover;
   padding: 60px 20px;
-  color: #fff;
+  color: #050505;
+  margin-top: 80px;
+
 }
 
 .contact-container {
@@ -180,8 +257,9 @@ header {
   max-width: 1100px;
   margin: auto;
   gap: 40px;
+  background-image: url("https://img.freepik.com/premium-vector/modern-abstract-white-transparent-background_18501-142.jpg?w=2000");
+  background-size: cover;
   flex-wrap: wrap;
-  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
   padding: 40px;
 }
@@ -189,12 +267,13 @@ header {
 .contact-info {
   flex: 1;
   min-width: 300px;
+  font-size: 18px;
 }
 
 .contact-info h2 {
   font-size: 32px;
   margin-bottom: 10px;
-  color: orange;
+  color: rgb(44, 145, 179);
 }
 
 .info-block {
@@ -202,7 +281,7 @@ header {
 }
 
 .info-block h4 {
-  color: orange;
+  color:rgb(44, 145, 179);
   margin-bottom: 5px;
 }
 
@@ -225,10 +304,10 @@ header {
 .contact-form textarea {
   padding: 12px;
   border: none;
-  border-bottom: 2px solid orange;
+  border-bottom: 2px solid rgb(44, 145, 179);
   background: transparent;
   color: #fff;
-  width: 100%;
+  width: 80%;
   font-size: 16px;
 }
 
@@ -238,10 +317,11 @@ header {
 }
 
 .submit-btn {
+  width: 50%;
   padding: 15px;
   border: none;
-  background: orange;
-  color: #000;
+  background:rgb(44, 145, 179);
+  color: white;
   font-weight: bold;
   border-radius: 25px;
   cursor: pointer;
@@ -249,7 +329,7 @@ header {
 }
 
 .submit-btn:hover {
-  background: orange;
+  background:rgb(44, 145, 179);
 }
 
 .map {
@@ -268,11 +348,13 @@ header {
 .contact-form textarea {
   padding: 12px;
   border: none;
-  border-bottom: 2px solid orange;
+  border-bottom: 2px solid rgb(44, 145, 179);
   background: transparent;
   color: #fff;
   width: 80%;
+  
   font-size: 16px;
+ 
 }
   .container {
     flex-direction: column;
@@ -281,8 +363,8 @@ header {
   padding: 15px;
   border: none;
   width: 50%;
-  background: orange;
-  color: #000;
+  background:rgb(44, 145, 179);
+  color: white;
   font-weight: bold;
   border-radius: 25px;
   cursor: pointer;
@@ -290,7 +372,7 @@ header {
 }
 
 .submit-btn:hover {
-  background: orange;
+  background: rgb(44, 145, 179);
 }
 }
 
@@ -326,7 +408,7 @@ header {
 }
 
 .footer h4 {
-  color: #ffc107;
+  color:rgb(44, 145, 179);
   margin-bottom: 15px;
   font-size: 18px;
 }
@@ -354,7 +436,7 @@ header {
 }
 
 .footer-icons a i:hover {
-  color: #ffc107;
+  color:rgb(44, 145, 179);
 }
 
 .footer-box ul {
@@ -440,20 +522,75 @@ header {
             <p class="logo-text"><b>B SQUARE INTERIORS</b></p>
         </div>
     
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="hamburger" onclick="toggleMenu()" aria-label="menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
     <div class="navbar-links" id="navlinks" >
         <a class="a-element" href="index.html">Home</a>
-        <a class="a-element" href="index.html">about</a>
+        <a class="a-element" href="aboutus.html">about</a>
         <a class="a-element" href="index.html">services</a>
-        <a class="a-element" href="#contact">contact</a> 
+
+        <div class="dropdown" id="brandsDropdown">
+          <button class="a-element" id="brandsBtn" aria-haspopup="true" aria-expanded="false">
+            brands <span class="arrow" aria-hidden="true">&#x25BE;</span>
+          </button>
+          <div class="dropdown-menu" aria-label="Brands list" role="menu">
+            <a href="brand1.html" role="menuitem">Hardware Brands</a>
+            <a href="brand2.html" role="menuitem">Plywood Brands</a>
+            <a href="brand3.html" role="menuitem">False ceiling Brands</a>
+            <a href="brand4.html" role="menuitem">lights Brands</a>
+            <a href="brand5.html" role="menuitem">Wires Brands</a>
+            <a href="brand6.html" role="menuitem">Glues Brands</a>
+          </div>
+        </div>
+
+        <a class="a-element" href="contact.html">contact us </a> 
+        
     </div>
     </div>
 </header>
-
 <script>
-    function toggleMenu() {
-        document.getElementById("navlinks").classList.toggle("show");
+  (function(){
+    const dropdown = document.getElementById('brandsDropdown');
+    const btn = document.getElementById('brandsBtn');
+    const menuList = dropdown.querySelector('.dropdown-menu');
+
+    function closeDropdown() {
+      dropdown.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
     }
+    function openDropdown() {
+      dropdown.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      dropdown.classList.toggle('open');
+      const expanded = dropdown.classList.contains('open');
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+
+    // Close when clicking/tapping outside
+    document.addEventListener('pointerdown', e => {
+      if (!dropdown.contains(e.target)) {
+        closeDropdown();
+      }
+    });
+
+    // Escape key closes dropdown
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeDropdown();
+    });
+
+    // Prevent inside clicks from bubbling unexpectedly
+    menuList.addEventListener('click', e => e.stopPropagation());
+  })();
+</script>
+ <script>
+  function toggleMenu() {
+      document.getElementById("navlinks").classList.toggle("show");
+  }
 </script>
 
   <!--contact us banner-->
@@ -471,7 +608,7 @@ header {
   
         <div class="info-block">
           <h4>📍 Location</h4>
-          <p>HYderabad</p>
+          <p>Hyderabad</p>
         </div>
   
         <div class="info-block">
