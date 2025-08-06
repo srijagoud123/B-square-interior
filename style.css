@@ -148,7 +148,7 @@ header {
     height: auto;
   }
   .logo-text {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .navbar-links {
@@ -253,10 +253,10 @@ header {
   content: '';
   position: absolute;
   top: 0; left: 0;
-  width: 100%;
+  width: 130%;
   height: 100%;
-  background-image: url("https://www.decoraid.com/wp-content/uploads/2021/04/blue-and-white-interior-2500x1593.jpeg");
-  background-position: center;
+  background-image: url("img/homepage-backg\ \(3\).jpeg");
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
@@ -272,162 +272,151 @@ header {
 }
 
 .home-content h2 {
-  font-size: 2.5rem;
+  font-size: 40px;
   margin-bottom: 10px;
   color: white;
-  text-align: center;
-  
+  padding-left: 0;
+  width: 100%;
 }
-.home-section p{
+
+.home-section p {
   text-align: center;
   font-size: 20px;
-  margin-bottom: 30px;
- 
+  margin-bottom: 10px;
+  padding-left: 0;
+  width: 100%;
 }
 
 .home-buttons .btn-primary {
   display: inline-block;
   padding: 10px 14px;
   border-radius: 6px;
-  margin: 10px;
+  margin: 10px auto 50px;
   font-weight: bold;
   text-decoration: none;
   transition: 0.3s ease;
-  margin-bottom: 150px;
-}
-
-.home-buttons .btn-primary {
+  width: 30%;
   background-color: rgb(44, 145, 179);
   color: rgb(255, 255, 255);
-  
-}
-
-/* Responsive for Tablets*/
-
-@media (max-width: 1024px) {
-/*home-section*/
-.home-section {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 60px 20px;
-  min-height: 60vh;
-  color: white;
-  text-align: center;
-}
-
-.home-section::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://www.decoraid.com/wp-content/uploads/2021/04/blue-and-white-interior-2500x1593.jpeg");
-  background-position: 10%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-.home-content {
-  position: relative;
-  z-index: 2;
-  max-width: 100%;
-  text-align: center;
-}
-
-.home-content h2 {
-  font-size: 80px;
-  text-align: center;
-  padding-left: 90px;
-}
-
-.home-content p {
-  font-size: 16px;
-  text-align: center;
-  padding-left: 90px;
-}
-.home-buttons{
-  padding-left: 90px;
-}
-.home-buttons .btn-primary {
-  margin-top: 20px;
-  font-size: 14px;
- 
-}
 }
 
 
-  /* ===========================
-     Responsive for Mobile Devices
-     =========================== */
-     
-      @media (max-width: 768px) {
-        .home-section {
-          height: 490px;
-          text-align: center;
-          padding: 20px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          
-        }
-        .home-section::before {
-          content: '';
-          position: absolute;
-          top: 0; left: 0;
-          width: 100%;
-          height: 100%;
-          background-image: url("https://www.decoraid.com/wp-content/uploads/2021/04/blue-and-white-interior-2500x1593.jpeg");
-          background-position: 5%;
-          background-size: cover;
-          background-repeat: no-repeat;
-          z-index: 1;
-        }
-      
-        .home-content {
-          padding: 0;
-          margin: 0;
-          max-width: 100%;
-        }
-      
-        .home-content h2 {
-          font-size: 23px;
-          text-align: center;
-          padding: 0;
-          margin-bottom: 5px;
-          padding-left: 60px;
-       
-        }
-      
-        .home-content p {
-          font-size: 14px;
-          width:80%;
-          text-align: center;
-          margin-bottom: 10px;
-          padding-left: 60px;
-        }
-      
-        .home-buttons {
-          padding: 0;
-          margin-top: 30px;
-          margin-bottom: 100px;
-          padding-left: 50px;
-        }
-      
-        .home-buttons .btn-primary {
-          font-size: 16px;
-          padding: 10px 20px;
-          margin: 0 auto;
-          display: inline-block;
-         
-        }
-      }
-    
+/* Responsive for Tablets */
+@media (max-width: 1024px) { 
+  .home-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    min-height: 100vh;
+  }
 
+  .home-section::before {
+    width: 280%;
+    background-position:bottom;
+  }
+
+  .home-content {
+    max-width: 100%;
+    text-align:right;
+   
+  }
+
+  .home-content h2 {
+    font-size: 42px;
+    padding: 0;
+  }
+
+  .home-content p {
+    font-size: 28px;
+    padding: 0;
+  }
+
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-buttons .btn-primary {
+    font-size: 16px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+
+/* Responsive for Mobile Devices */
+@media (max-width: 768px) {
+  .home-section {
+    height: auto;
+    text-align: center;
+    padding: 40px 20px;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .home-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 280%;
+    height: 100%;
+    background-image: url("img/homepage-backg\ \(3\).jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  .home-content {
+    padding-bottom: 60px;
+    max-width: 100%;
+    z-index: 2;
+    position: relative;
+    padding-left: 0;
+  }
+
+  .home-content h2 {
+    font-size: 24px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .home-content p {
+    font-size: 16px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  .home-buttons .btn-primary {
+    font-size: 16px;
+    padding: 5px 30px;
+    background-color: rgb(44, 145, 179);
+    color: #fff;
+    border-radius: 6px;
+    width: 100%;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Optional: Prevent side scroll on mobile */
+body {
+  overflow-x: hidden;
+}
 /*service we offer*/
 
 h2 {
@@ -589,7 +578,7 @@ h2 {
   
 .why-section {
   padding: 30px 20px;
-  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/002/544/079/small/light-blue-blurred-background-colorful-abstract-illustration-with-gradient-new-design-for-your-web-apps-vector.jpg');
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-dark-blue-ash-solid-color-space-3dbanner-background-blue-graysolid-colorspatial-image_82446.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -622,27 +611,21 @@ h2 {
 }
 
 .why-left h2 {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 15px;
-  color: rgb(44, 145, 179);
+  color: white;
 }
 
 .why-left p {
-  font-size: 18px;
+  font-size:18px;
   color: #fcf9f9;
   margin-bottom: 35px;
   text-align: center;
 }
-
-.view-btn {
-  padding: 10px 20px;
-  background-color: #222;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 14px;
+.whyleft-para{
+  font-size:25px;
 }
+
 
 /* Right Cards Grid */
 .why-right {
@@ -703,6 +686,11 @@ h2 {
   .why-right {
     grid-template-columns: repeat(2, 1fr);
   }
+  .why-left h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: white;
+  }
 }
 
 /* Mobile View */
@@ -730,7 +718,7 @@ h2 {
 
   .why-left h2{
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     color: rgb(44, 145, 179);
   }
 .interior-design{
