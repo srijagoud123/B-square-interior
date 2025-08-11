@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glues Brands</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+    }
+
+    h2 {
+      color: #0074cc;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .brand-card {
+      display: flex;
+      background-color: #ffffff;
+      border-left: 4px solid #0074cc;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      align-items: center;
+    }
+
+    .brand-logo {
+      width: 120px;
+      height: 100px;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .brand-content {
+      flex: 1;
+    }
+
+    .brand-title {
+      font-weight: bold;
+      font-size: 18px;
+      color: #0074cc;
+      margin-bottom: 10px;
+    }
+
+    .brand-desc {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .brand-link {
+      margin-top: 10px;
+    }
+
+    .brand-link a {
+      color: #0074cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .brand-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+     h2 {
+        font-size: 23px;
+        
+     }
+      .brand-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .brand-desc {
+      text-align: start;
+    }
+
+      .brand-logo {
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Glues Brands We Use</h2>
+
+  <!-- Polycab Wires -->
+  <div class="brand-card">
+    <img src="img/jivanjor-logo.jpg" alt="Jivanjor Logo" class="brand-logo">
+    <div class="brand-content">
+      <div class="brand-title">Jivanjor Adhesives</div>
+      <div class="brand-desc">
+        Jivanjor is a trusted Indian adhesive brand, known for delivering high-quality bonding solutions for furniture and interior projects. Their range includes wood adhesives, laminating glues, and specialty products for carpentry and décor applications. Jivanjor adhesives are designed for strong bonding, fast setting, and long-lasting durability. They cater to both residential and commercial interiors, ensuring safety and performance. With a strong market presence, Jivanjor is widely used by carpenters, contractors, and interior designers.
+      </div>
+      <div class="brand-link">
+        <a href=" https://www.jivanjor.com" target="_blank">Visit Website</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- fevicol -->
+  <div class="brand-card">
+    <img src="img/fevicol-logo.jpg" alt="Fevicol Logo" class="brand-logo">
+    <div class="brand-content">
+      <div class="brand-title">Fevicol</div>
+      <div class="brand-desc">
+        Fevicol is India’s most recognized adhesive brand, widely used in woodworking, furniture manufacturing, and interior projects. It offers strong bonding for wood, laminates, veneers, MDF, and other interior materials. With products like Fevicol SH, Marine, and HeatX, it caters to various needs including water resistance and heat endurance. Fevicol’s easy application and non-toxic formulation make it safe for home and professional use. For decades, it has been the go-to choice for carpenters and interior professionals.
+      </div>
+      <div class="brand-link">
+        <a href=" https://www.fevicol.in" target="_blank">Visit Website</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
