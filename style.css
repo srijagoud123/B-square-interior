@@ -254,7 +254,7 @@ header {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
-  height: 98%;
+  height: 120%;
   background-image: url("https://www.decoraid.com/wp-content/uploads/2021/04/blue-and-white-interior-scaled.jpeg");
   background-position: center;
   background-size: cover;
@@ -1011,3 +1011,4 @@ button{
     height: 80px;
   }
 }
+
