@@ -255,7 +255,7 @@ header {
   top: 0; left: 0;
   width: 100%;
   height: 120%;
-  background-image: url("https://www.decoraid.com/wp-content/uploads/2021/04/blue-and-white-interior-scaled.jpeg");
+  background-image: url("img/homesection-bg\ \(2\).jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -353,19 +353,21 @@ header {
 @media (max-width: 768px) {
   .home-section {
     height: auto;
+    max-height: 500px;
     text-align: center;
-    padding: 20px 20px;
+    padding: 20px 15px;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
   }
 
   .home-section::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
-    width: 180%;
+    width: 300%;
     height: 100%;
-    background-image: url("https://www.decoraid.com/wp-content/uploads/2021/04/blue-and-white-interior-scaled.jpeg");
+    background-image: url("img/homesection-bg\ \(2\).jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -373,7 +375,7 @@ header {
   }
 
   .home-content {
-    padding-bottom: 60px;
+    padding-bottom: 20px;
     max-width: 100%;
     z-index: 2;
     position: relative;
