@@ -284,7 +284,7 @@ header {
   margin-bottom: 20px;
   padding-left: 0;
   width: 100%;
-  color: rgb(12, 11, 11);;
+  color: rgb(10, 9, 9);;
 }
 
 .home-buttons .btn-primary {
@@ -296,7 +296,7 @@ header {
   text-decoration: none;
   transition: 0.3s ease;
   width: 30%;
-  background-color:rgb(44, 145, 179);;
+  background-color:rgb(12, 13, 14);;
   color: white;
 }
 
