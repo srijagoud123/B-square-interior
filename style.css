@@ -274,7 +274,7 @@ header {
 .home-content h2 {
   font-size: 40px;
   margin-bottom: 20px;
-  color: rgb(46, 44, 44);
+  color: rgb(255, 255, 255);
   width: 100%;
 }
 
@@ -284,7 +284,7 @@ header {
   margin-bottom: 20px;
   padding-left: 0;
   width: 100%;
-  color: rgb(20, 20, 20);;
+  color: rgb(247, 243, 243);;
 }
 
 .home-buttons .btn-primary {
@@ -351,7 +351,7 @@ header {
 
 
 /* Responsive for Mobile Devices */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .home-section {
     height: auto;
     max-height: 200px;
@@ -410,7 +410,7 @@ header {
     font-size: 16px;
     padding: 5px 10px;
     background-color: white;
-    color: rgb(9, 116, 255);;
+    color: rgb(9, 116, 255);
     border-radius: 6px;
     width: 100%;
     text-decoration: none;
