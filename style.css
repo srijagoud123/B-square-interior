@@ -255,7 +255,7 @@ header {
   top: 0; left: 0;
   width: 100%;
   height: 120%;
-  background-image: url("img/homepage-image\ \(3\).jpg");
+  background-image: url("https://images8.alphacoders.com/595/thumb-1920-595107.jpg");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -274,7 +274,7 @@ header {
 .home-content h2 {
   font-size: 40px;
   margin-bottom: 20px;
-  color: rgb(255, 255, 255);
+  color: rgb(5, 5, 5);
   width: 100%;
 }
 
@@ -284,7 +284,7 @@ header {
   margin-bottom: 20px;
   padding-left: 0;
   width: 100%;
-  color: rgb(247, 243, 243);;
+  color: rgb(12, 11, 11);;
 }
 
 .home-buttons .btn-primary {
@@ -366,10 +366,10 @@ header {
     content: '';
     position: absolute;
     top: 0; left: 0;
-    width:200%;
+    width:230%;
     height: 100%;
-    background-image: url("img/homepage-image\ \(3\).jpg");
-    background-position: center;
+    background-image: url("https://images8.alphacoders.com/595/thumb-1920-595107.jpg");
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
@@ -388,14 +388,14 @@ header {
     padding: 0;
     margin-bottom: 20px;
     width: 100%;
-    color: white;
+    color: rgb(255, 246, 246);
   }
 
   .home-content p {
     font-size: 16px;
     padding: 0;
     margin-bottom: 20px;
-    color: white;
+    color: rgb(255, 251, 251);
   }
 
   .home-buttons {
