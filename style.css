@@ -353,8 +353,7 @@ header {
 /* Responsive for Mobile Devices */
 @media (max-width: 768px) {
   .home-section {
-    height: auto;
-    max-height: 500px;
+    max-height: 200px;
     text-align: center;
     padding: 20px 15px;
     flex-direction: column;
