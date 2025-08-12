@@ -255,7 +255,7 @@ header {
   top: 0; left: 0;
   width: 100%;
   height: 120%;
-  background-image: url("img/homepage-image.jpg");
+  background-image: url("img/homepage-image\ \(3\).jpg");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -274,7 +274,7 @@ header {
 .home-content h2 {
   font-size: 40px;
   margin-bottom: 20px;
-  color: rgb(44, 145, 179);
+  color: rgb(46, 44, 44);
   width: 100%;
 }
 
@@ -284,7 +284,7 @@ header {
   margin-bottom: 20px;
   padding-left: 0;
   width: 100%;
-  color: rgb(44, 145, 179);;
+  color: rgb(20, 20, 20);;
 }
 
 .home-buttons .btn-primary {
@@ -296,7 +296,7 @@ header {
   text-decoration: none;
   transition: 0.3s ease;
   width: 30%;
-  background-color: rgb(44, 145, 179);;
+  background-color:rgb(44, 145, 179);;
   color: white;
 }
 
@@ -353,6 +353,7 @@ header {
 /* Responsive for Mobile Devices */
 @media (max-width: 768px) {
   .home-section {
+    height: auto;
     max-height: 200px;
     text-align: center;
     padding: 20px 15px;
@@ -365,9 +366,9 @@ header {
     content: '';
     position: absolute;
     top: 0; left: 0;
-    width: 250%;
+    width:200%;
     height: 100%;
-    background-image: url("img/homepage-image.jpg");
+    background-image: url("img/homepage-image\ \(3\).jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -387,12 +388,14 @@ header {
     padding: 0;
     margin-bottom: 20px;
     width: 100%;
+    color: white;
   }
 
   .home-content p {
     font-size: 16px;
     padding: 0;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    color: white;
   }
 
   .home-buttons {
@@ -406,13 +409,13 @@ header {
   .home-buttons .btn-primary {
     font-size: 16px;
     padding: 5px 10px;
-    background-color: rgb(44, 145, 179);
-    color: #fff;
+    background-color: white;
+    color: rgb(9, 116, 255);;
     border-radius: 6px;
     width: 100%;
     text-decoration: none;
     margin-left: 20px;
-    margin-bottom: 330px;
+    margin-bottom: 200px;
   }
 }
 
